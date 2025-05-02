@@ -23,6 +23,17 @@ require("lazy").setup({
   },
 
   { import = "plugins" },
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end,
+  }
 }, lazy_config)
 
 -- load theme
@@ -35,3 +46,5 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.cmd('source ~/.config/nvim/old_config.vim')

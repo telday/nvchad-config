@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "everforest_light",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -20,5 +20,13 @@ M.base46 = {
 --          lazyload = false
 --      }
 --}
+
+M.ui = {
+  statusline = {
+    theme = "default",
+    separator_style = "round",
+    order = { "mode", "git", "%=", "lsp_msg", "%=", "lsp", "cursor", "cwd" }
+  }
+}
 
 return M
